@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Data Sharing Form | Thank you</title>
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../style/cars.css" rel="stylesheet" type="text/css" />
+<link href="../shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+<script src="../scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="../shadowbox/shadowbox.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<script type="text/javascript"> 
+    Shadowbox.init({
+        flashVersion: "10.1.53",
+        overlayOpacity: 0.8
+    });
+</script>
+<script>
+function synchFormFields() {
+	var e = document.getElementById('regForm');
+	var m = '';
+	
+	if(!e['first_name'].value) {
+		m += '- First name is required.\n';
+	}
+	if(!e['last_name'].value) {
+		m += '- Last name is required.\n';
+	}
+	if(!e['phone'].value) {
+		m += '- Telephone number is required.\n';
+	}
+	if(!e['URL'].value) {
+		m += '- Website address is required.\n';
+	}
+	if(!e['username'].value) {
+		m += '- Your email/Username is required.\n';
+	}
+	if(!/.+@[^.]+(\.[^.]+)+/.test(e['username'].value)) {
+		m += '- E-mail requires a valid e-mail address.\n';
+	}
+	if(!e['password'].value) {
+		m += '- Password is required.\n';
+	}
+	if(e['password'].value != e['confirm'].value) {
+		m += '- Your password and confirmation password do not match.\n';
+	}
+	if(!e['00N80000004IL0K'].checked) {
+		m += '- You must agree to the terms and conditions to proceed.\n';
+	}
+	if(m) {
+		alert('The following error(s) occurred:\n\n' + m);
+		return false;
+	}
+	var makesSelected = new Array();
+	// Set the salesforce make list to the appropriate string of selected makes.
+	var element = document.getElementById('makeList');
+	for (var i=0; i<element.options.length; i++) {
+		if (element.options[i].selected) {
+			makesSelected.push(element.options[i].text)
+		}
+	}
+	document.getElementById('00N80000004GaQI').value = makesSelected.toString();
+	
+	// Set the salesforce area/DMA value to the appropriate area.
+	element = document.getElementById('areaList');
+	document.getElementById('00N80000004IdZm').value = element.options[element.selectedIndex].text;
+	return true;
+}
+</script>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("00NC0000004aUKy").onclick = function() {document.getElementById("00N80000004IhqI_0").checked = checked;}
+		var URL = window.location.href.split('?');
+		if(URL[1] == "BASIC") {
+			document.getElementById("00N80000004IhqI_0").checked = checked;
+		}
+		if(URL[1] == "PRO") {
+			document.getElementById("00N80000004IhqI_1").checked = checked;
+		}
+		if(URL[1] == "ENTERPRISE") {
+			document.getElementById("00N80000004IhqI_2").checked = checked;
+		}
+	}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18436049-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--[if IE 7]>
+	<style type="text/css">
+		#footer {visibility:hidden;}
+	</style>
+<![endif]-->
+</head>
+<body>
+<div id="maincontainer">
+<div id="centerbodypage">
+  <div id="centerpage"><br />
+    <div class="backpagetop"></div>
+    <div class="backpagemiddle2">
+      <div id="logoholder">
+    <img src="/images/partners/carslogo.png" width="231" height="98" /> <br />
+        <br />
+<h2>Your request has been submitted. Thank you!</h2>
+      </div><br /><br /><br />
+      <h4><br />
+        </h4>
+      <div class="bodycenter">
+        <p><strong>Next Step:</strong>
+            Check your email as we will be sending instructions for the next steps. If you have any questions, please contact Force Marketing support.<br />
+          </p>
+          <br />
+          <br />
+          <br />
+          
+          <h4>Close Window To Exit</h4>
+            </div>
+          </div>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
